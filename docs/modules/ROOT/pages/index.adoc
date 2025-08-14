@@ -1,0 +1,13 @@
+= Welcome to the Internship Docs
+:page-nav_order: 10
+:page-description: Starter docs site powered by Antora.
+
+This is a minimal Antora site scaffold.
+
+- Edit `docs/modules/ROOT/pages/index.adoc` to change this page.
+- Add more pages under `docs/modules/ROOT/pages/`.
+- Update navigation in `docs/modules/ROOT/nav.adoc`.
+
+== Next steps
+
+Refer to the README for build instructions.

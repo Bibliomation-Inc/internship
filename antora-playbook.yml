@@ -1,0 +1,21 @@
+site:
+  title: Internship Docs
+  url: https://example.com
+  start_page: internship-docs::index.adoc
+
+content:
+  sources:
+    - url: .
+      branches: HEAD
+      start_path: docs
+
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/3.2.x/raw/build/ui-bundle.zip?job=bundle
+    snapshot: true
+
+output:
+  dir: build/site
+
+runtime:
+  fetch: true
