@@ -1,13 +1,45 @@
-= Welcome to the Internship Docs
+= Bibliomation Evergreen Internship Guide
 :page-nav_order: 10
-:page-description: Starter docs site powered by Antora.
+:page-description: Orientation, environment setup, and contribution workflows for Bibliomation interns working on the Evergreen ILS.
 
-This is a minimal Antora site scaffold.
+Welcome. This guide orients Bibliomation interns to the Evergreen ILS, covering local workflows, environment setup, and community contribution practices.
 
-- Edit `docs/modules/ROOT/pages/index.adoc` to change this page.
-- Add more pages under `docs/modules/ROOT/pages/`.
-- Update navigation in `docs/modules/ROOT/nav.adoc`.
+.Bibliomation
+image::logo.svg[Bibliomation logo, width=360, align=center]
 
-== Next steps
+== Start Here
 
-Refer to the README for build instructions.
+New to Evergreen? Follow the xref:first-week-checklist.adoc[First Week Checklist] to set up your environment, run Evergreen via Docker, and complete your first manual install.
+
+== What is Evergreen?
+
+Evergreen is an open-source Integrated Library System (ILS) designed for libraries of all types and sizes. It provides a robust set of features for managing library operations, including cataloging, circulation, and patron management. Evergreen is built on a modular architecture, allowing for easy customization and integration with other systems.
+
+== Core Technologies
+
+Evergreen is primarily developed using:
+
+- **PostgreSQL**: The database backend for storing all library data.
+- **Perl**: The primary programming language used for Evergreen backend development.
+- **Angular**: The primary framework used for Evergreen frontend development.
+- **Antora**: The documentation site generator used for Evergreen's documentation. Also used to deploy this site.
+
+== Development Environment Requirements
+
+See xref:tools-and-prereqs.adoc[Prereqs & Tools] for OS, Docker, Git, Node/NPM, pgAdmin, and account setup.
+
+== Good First Tasks
+
+See xref:first-week-checklist.adoc[First Week Checklist] for your initial tasks and acceptance criteria.
+
+== Quick links
+
+See xref:resources.adoc[Resources & Quick Links] for curated references, servers, and bug search shortcuts.
+
+- Explore the link:https://wiki.evergreen-ils.org/doku.php?id=community_servers[community test servers,window=_blank]:
+    * link:https://demo.evergreencatalog.com[Evergreen Demo Catalog,window=_blank]
+    * link:https://bugsquash.mobiusconsortium.org/[Bug Squash,window=_blank]
+- xref:docker-dev.adoc[Run the Evergreen dev Docker container] and point it to the Evergreen code cloned from your fork.
+- Browse the link:https://docs.evergreen-ils.org/[Evergreen Documentation,window=_blank]
+- Read existing link:https://bugs.launchpad.net/evergreen/[bug reports on Launchpad,window=_blank] to understand common issues and how they are resolved.
+- Build and install Evergreen manually. Follow link:https://evergreen-ils.org/documentation/install/README_3_13.html[the community install guide.]

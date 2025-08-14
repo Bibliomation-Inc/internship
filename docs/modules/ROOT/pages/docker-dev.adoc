@@ -1,0 +1,115 @@
+= Evergreen ILS Dockerized Development Environment
+
+This project provides a comprehensive Dockerized setup for the *Evergreen Integrated Library System (ILS)*, tailored for development and testing on both Windows and Linux systems. Utilizing a containerized approach, this setup ensures compatibility, ease of deployment, and rapid configuration across different versions of the Evergreen ILS.
+
+[.lead]
+Quickstart:
+
+- Ensure xref:tools-and-prereqs.adoc[Docker and prerequisites] are installed
+- Clone Evergreen locally
+- Map your local repo into the container with docker run (below)
+- Symlink css and eg2 as noted
+- Start Angular build watch
+
+== Key Features
+
+- *Flexible Builds*: Allows using both official Mobius builds from Docker Hub and custom local builds for personalized development.
+- *Local Filesystem Mapping*: Maps local Evergreen ILS Git repositories into the container, enabling seamless code synchronization for rapid development.
+- *Automatic Configuration*: Includes symbolic links and configuration steps to integrate local repositories and facilitate custom configuration of services.
+- *Post-build Service Controls*: Offers control mechanisms to restart Evergreen services, trigger Angular client builds, and manage databases.
+
+== Prerequisites
+
+- Docker installed on the host system
+- Local clone of the Evergreen ILS repository or a specific version
+
+== Docker Commands
+
+=== Run Mobius Evergreen ILS Container
+
+This command pulls and runs the latest Mobius Evergreen container with essential ports exposed. Update the path to your local Evergreen directory as necessary:
+
+[source,bash]
+----
+docker run -it -p 80:80 -p 443:443 -p 210:210 -p 6001:6001 -p 32:22 -p 5433:5432 -v /path/to/your/local/Evergreen:/home/opensrf/repos/Evergreen -h test.evergreen.com mobiusoffice/evergreen-ils:dev
+----
+
+[NOTE]
+====
+Windows (PowerShell) path example:
+
+[source,powershell]
+----
+docker run -it --name evergreen-dev `
+  -p 80:80 -p 443:443 -p 210:210 -p 6001:6001 -p 2222:22 -p 5433:5432 `
+  -v C:\path\to\Evergreen:/home/opensrf/repos/Evergreen `
+  -h test.evergreen.local mobiusoffice/evergreen-ils:dev
+----
+Use -p 2222:22 if port 22 is in use on the host.
+====
+
+=== Accessing the Container
+
+Run the following command to access the container's shell:
+
+[source,bash]
+----
+docker exec -it <container_name_or_id> bash
+----
+
+TIP: If you used --name evergreen-dev, you can exec with: docker exec -it evergreen-dev bash
+
+== Post-build Configuration
+
+=== CSS Assets
+
+In cases where CSS assets are not accessible in the mapped directories, a symbolic link may be required. Use the following command to link the `css` directory from the mapped Evergreen repository within the container:
+
+[source,bash]
+----
+# Remove existing css symlink or directory, if present
+rm -rf /openils/var/web/css 
+
+# Create a new symlink to the css directory
+ln -s /home/opensrf/repos/Evergreen/Open-ILS/web/css /openils/var/web/css
+----
+
+=== Angular Client
+
+To enable fast rebuilds of the Angular client, add the following symlink to the container:
+
+[source,bash]
+----
+# Remove the existing symlink
+rm -f /openils/var/web/eg2
+
+# Create a new symlink pointing to the Evergreen directory
+ln -s /home/opensrf/repos/Evergreen/Open-ILS/web/eg2 /openils/var/web/eg2
+----
+
+To enable fast rebuilds of the Angular client, run on the host in Open-ILS/src/eg2:
+
+[source,bash]
+----
+# If CLI not installed globally, use npx:
+npm ci
+npx ng build --watch
+# or
+ng build --watch
+----
+
+TIP: If styles/scripts seem stale, hard refresh the browser (Ctrl+F5) after each rebuild.
+
+Press kbd:[Crtl+f5] to refresh the browser and clear the cache. The Angular client should now be accessible with the latest changes and all CSS assets loaded correctly.
+
+== Additional Resources
+
+For more information on configuration, customization, and troubleshooting, refer to:
+
+* link:https://hub.docker.com/r/mobiusoffice/evergreen-ils[Evergreen ILS Docker Hub Repository]
+* link:https://github.com/mcoia/eg-docker[Evergreen Docker GitHub Repository]
+
+With this setup, development on the Evergreen ILS is streamlined, providing a flexible environment for both testing and active code development.
+
+== See also
+* xref:community-contribution.adoc[Contributing to the Evergreen Community]

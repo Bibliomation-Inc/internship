@@ -1,7 +1,7 @@
 site:
-  title: Internship Docs
-  url: https://example.com
-  start_page: internship-docs::index.adoc
+  title: Bibliomation Internship Guide
+  url: https://bibliomation-inc.github.io/internship
+  start_page: docs::index.adoc
 
 content:
   sources:
@@ -11,11 +11,23 @@ content:
 
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/3.2.x/raw/build/ui-bundle.zip?job=bundle
-    snapshot: true
+    # Load UI from a local bundle to avoid network downloads
+    url: ./ui-bundle.zip
+    snapshot: false
+  supplemental_files:
+  - path: ui.yml
+    contents: |
+      static_files:
+      - .nojekyll
+  - path: .nojekyll
 
 output:
   dir: build/site
 
 runtime:
-  fetch: true
+  fetch: false
+
+antora:
+  extensions:
+  - require: '@antora/lunr-extension'
+    index_latest_only: true

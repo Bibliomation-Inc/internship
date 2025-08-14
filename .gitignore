@@ -1,6 +1,5 @@
 # Antora build output
 build/
-.ui-cache/
 
 # Node
 node_modules/

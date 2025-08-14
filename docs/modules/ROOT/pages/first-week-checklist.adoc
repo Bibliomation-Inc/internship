@@ -1,0 +1,43 @@
+= First Week Checklist
+
+[NOTE]
+====
+Time frames are suggestions, not hard due dates. Adjust as needed.
+====
+
+== Day 1–2
+- Read xref:index.adoc[Home] and xref:resources.adoc[Resources & Quick Links]
+- Install xref:tools-and-prereqs.adoc[Prereqs & Tools]
+- Set up Git config and SSH keys
+- Fork https://github.com/evergreen-library-system/Evergreen and clone locally
+- Explore link:https://wiki.evergreen-ils.org/doku.php?id=community_servers[community test servers]:
+  * https://demo.evergreencatalog.com
+  * https://bugsquash.mobiusconsortium.org/
+- Read Evergreen docs: https://docs.evergreen-ils.org/
+- Skim xref:community-contribution.adoc[Contributing to Evergreen]
+
+Acceptance:
+- git and docker commands run successfully; GitHub account ready
+- You can log in to demo/staff interfaces and identify main areas
+- You can describe Evergreen at a high level and where code/docs live
+
+== Day 2–3
+- Run xref:docker-dev.adoc[Evergreen Dev Docker Container] with your local repo mapped
+- Enable Angular watch; verify hot reload
+
+Acceptance:
+- Staff client loads; CSS/assets resolve
+- Local code edits appear in the browser without rebuilding the container
+
+== Day 3–5
+- Complete xref:manual-install.adoc[Manual Build & Install] on a fresh VM
+
+Acceptance:
+- Evergreen services start; staff login works; notes captured and committed to a README
+
+== Ongoing
+- Read Launchpad bugs to understand common issues:
+  * https://bugs.launchpad.net/evergreen/
+- Pick a small docs or lint fix; open a PR (docs) or branch (code)
+- Join mailing lists and #evergreen IRC (see xref:community-contribution.adoc[Contributing to Evergreen])
+- Aim for one merged docs PR and a code branch linked to a bug

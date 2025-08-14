@@ -1,0 +1,26 @@
+= Resources & Quick Links
+
+== Documentation and Code
+- Evergreen docs: https://docs.evergreen-ils.org/
+- Evergreen GitHub (docs PRs): https://github.com/evergreen-library-system/Evergreen
+- Install guide (3.13): https://evergreen-ils.org/documentation/install/README_3_13.html
+- Docker Hub (preferred dev env): https://hub.docker.com/r/mobiusoffice/evergreen-ils
+
+== Community
+- Contributing guide: https://wiki.evergreen-ils.org/doku.php?id=contributing
+- Git workflow: https://wiki.evergreen-ils.org/doku.php?id=dev:git
+- Documentation process: https://wiki.evergreen-ils.org/doku.php?id=evergreen-docs:how-to-contribute-documentation
+- DCO 1.1: http://git.evergreen-ils.org/?p=Evergreen.git;a=blob;f=DCO-1.1.txt;hb=HEAD
+- Mailing lists: http://evergreen-ils.org/communicate/mailing-lists/
+- IRC: https://web.libera.chat/#evergreen
+- Get involved: https://evergreen-ils.org/involvement/
+- IRC quick start: https://wiki.evergreen-ils.org/doku.php?id=community:irc-quick-start
+
+== Community Servers
+- Evergreen Demo Catalog: https://demo.evergreencatalog.com
+- Bug Squash: https://bugsquash.mobiusconsortium.org/
+
+== Bug Search Shortcuts (Launchpad)
+* link:https://bugs.launchpad.net/evergreen/?field.searchtext=&orderby=-importance&search=Search&field.status%3Alist=NEW&field.status%3Alist=CONFIRMED&field.status%3Alist=TRIAGED&field.status%3Alist=INPROGRESS&field.status%3Alist=DEFERRED&field.status%3Alist=FIXCOMMITTED&field.status%3Alist=INCOMPLETE_WITH_RESPONSE&field.status%3Alist=INCOMPLETE_WITHOUT_RESPONSE&assignee_option=any&field.assignee=&field.bug_reporter=gmonti90&field.bug_commenter=&field.subscriber=&field.structural_subscriber=&field.tag=&field.tags_combinator=ANY&field.has_cve.used=&field.omit_dupes.used=&field.omit_dupes=on&field.affects_me.used=&field.has_patch.used=&field.has_branches.used=&field.has_branches=on&field.has_no_branches.used=&field.has_no_branches=on&field.has_blueprints.used=&field.has_blueprints=on&field.has_no_blueprints.used=&field.has_no_blueprints=on[By Bibliomation reporters (gmonti),window="_blank"]
+* link:https://bugs.launchpad.net/evergreen/?field.searchtext=&orderby=-importance&search=Search&field.status%3Alist=NEW&field.status%3Alist=CONFIRMED&field.status%3Alist=TRIAGED&field.status%3Alist=INPROGRESS&field.status%3Alist=DEFERRED&field.status%3Alist=FIXCOMMITTED&field.status%3Alist=INCOMPLETE_WITH_RESPONSE&field.status%3Alist=INCOMPLETE_WITHOUT_RESPONSE&assignee_option=any&field.assignee=&field.bug_reporter=mllewell&field.bug_commenter=&field.subscriber=&field.structural_subscriber=&field.tag=&field.tags_combinator=ANY&field.has_cve.used=&field.omit_dupes.used=&field.omit_dupes=on&field.affects_me.used=&field.has_patch.used=&field.has_branches.used=&field.has_branches=on&field.has_no_branches.used=&field.has_no_branches=on&field.has_blueprints.used=&field.has_blueprints=on&field.has_no_blueprints.used=&field.has_no_blueprints=on[By Bibliomation reporters (mllewell),window="_blank"]
+* link:https://bugs.launchpad.net/evergreen/+bugs?field.searchtext=&orderby=-importance&search=Search&field.status%3Alist=NEW&field.status%3Alist=CONFIRMED&field.status%3Alist=TRIAGED&field.status%3Alist=INPROGRESS&field.status%3Alist=DEFERRED&field.status%3Alist=FIXCOMMITTED&field.status%3Alist=INCOMPLETE_WITH_RESPONSE&field.status%3Alist=INCOMPLETE_WITHOUT_RESPONSE&assignee_option=any&field.assignee=&field.bug_reporter=jwoolford&field.bug_commenter=&field.subscriber=&field.structural_subscriber=&field.tag=&field.tags_combinator=ANY&field.has_cve.used=&field.omit_dupes.used=&field.omit_dupes=on&field.affects_me.used=&field.has_patch.used=&field.has_branches.used=&field.has_branches=on&field.has_no_branches.used=&field.has_no_branches=on&field.has_blueprints.used=&field.has_blueprints=on&field.has_no_blueprints.used=&field.has_no_blueprints=on[By Bibliomation reporters (jwoolford),window="_blank"]

@@ -1,0 +1,51 @@
+= Manual Build & Install
+
+This page is a companion to the official Evergreen community install guide. Use the community guide as your single source of truth; this page provides goals, verification steps, and deliverables.
+
+== Official Guide
+- Install guide (3.13): https://evergreen-ils.org/documentation/install/README_3_13.html
+- Choose the guide that matches your Evergreen version and OS/distro.
+
+[IMPORTANT]
+====
+Use a fresh VM or container and take snapshots at key checkpoints.
+====
+
+== How to Use This Page
+- Read the official guide for your target version/distro.
+- Perform the install strictly by the guide.
+- Use the verification checklist and deliverables below to confirm success and capture findings.
+
+== Decide and Record
+Capture these up front in your notes:
+
+- Evergreen version and branch used
+- OS/distro and version
+- Hostname/domain chosen
+- PostgreSQL version
+- Any local deviations required by your environment
+
+== Verify Your Install (Acceptance Criteria)
+Your install is successful when:
+
+- All services start without errors (OpenSRF and Evergreen)
+- OPAC and staff client load in the browser
+- You can log in with an admin account
+- Database connections (psql/pgAdmin) work to the Evergreen database
+- Logs show no recurring errors after initial startup
+
+== Deliverables
+
+A README (or notes) including: (Feel free to host this in your own GitHub repository and include a link)
+
+  - Exact guide followed (URL and version)
+  - Commands run only where they differed from the guide
+  - Deviations and why they were needed
+  - Issues encountered and resolutions
+  - Verification results (URLs used, accounts tested)
+
+== Tips (Not a Replacement for the Guide)
+- Use distro package names and commands from the guide; do not substitute.
+- Favor supported PostgreSQL versions noted in the guide.
+- Keep terminal history; it helps produce accurate notes.
+

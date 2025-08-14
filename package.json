@@ -1,0 +1,20 @@
+{
+    "name": "internship-docs",
+    "version": "1.0.0",
+    "description": "Antora documentation site for Bibliomation internships",
+    "main": "gulpfile.js",
+    "scripts": {
+        "start": "gulp preview",
+        "build": "antora antora-playbook.yml",
+        "ci": "antora --fetch antora-playbook.yml"
+    },
+    "dependencies": {
+        "@antora/cli": "^3.1.10",
+        "@antora/lunr-extension": "^1.0.0-alpha.10",
+        "@antora/site-generator": "^3.1.10",
+        "gulp": "^4.0.2",
+        "gulp-connect": "^5.7.0"
+    },
+    "author": "Ian Skelskey",
+    "license": "ISC"
+}

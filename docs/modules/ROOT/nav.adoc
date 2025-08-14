@@ -1,1 +1,10 @@
 * xref:index.adoc[Home]
+* xref:first-week-checklist.adoc[First Week Checklist]
+* Development Environment
+** xref:tools-and-prereqs.adoc[Prereqs & Tools]
+** xref:docker-dev.adoc[Evergreen Dev Docker Container]
+** xref:manual-install.adoc[Manual Build & Install]
+* Community Participation
+** xref:community-contribution.adoc[Contributing to Evergreen]
+* Reference
+** xref:resources.adoc[Resources & Quick Links]

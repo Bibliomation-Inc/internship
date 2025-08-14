@@ -1,5 +1,10 @@
-name: internship-docs
-title: Internship Docs
+name: docs
+title: Bibliomation Internship Guide
 version: '1.0'
+start_page: ROOT:index.adoc
 nav:
   - modules/ROOT/nav.adoc
+
+asciidoc:
+  attributes:
+    experimental: true

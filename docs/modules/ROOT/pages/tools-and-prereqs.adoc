@@ -1,0 +1,46 @@
+= Prereqs & Tools
+
+== Operating System
+- All development can be done on Windows, but Linux is required to run the Evergreen server.
+- A VM is acceptable for Linux experimentation
+
+== Install
+- Docker + Docker Compose
+- Git
+- Node.js LTS + npm (Angular builds)
+- Optional: Angular CLI (npm i -g @angular/cli)
+- Optional: pgAdmin
+- Code editor of your choice
+
+Verify:
+[source,bash]
+----
+docker --version
+docker compose version || docker-compose --version
+git --version
+node --version && npm --version
+----
+
+== Accounts
+- GitHub account
+- Launchpad account (for code contributions)
+- Mailing lists (see xref:community-contribution.adoc[Contributing to Evergreen])
+- IRC on Libera.chat (web client available)
+
+== Git Setup
+[source,bash]
+----
+git config --global user.name "Your Name"
+git config --global user.email "your.email@biblio.org"
+ssh-keygen -t ed25519 -C "your.email@biblio.org"
+# Add ~/.ssh/id_ed25519.pub to GitHub
+----
+
+== Local Evergreen Clone
+[source,bash]
+----
+# Docs workflow (clone your fork of Evergreen)
+git clone https://github.com/your-username/Evergreen.git
+# or traditional workflow (requires SSH access)
+git clone git://git.evergreen-ils.org/Evergreen.git
+----
